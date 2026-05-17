@@ -1,4 +1,5 @@
 .{
+    .fingerprint = 0x17e4ff246fa22c6c,
     .name = .ziez_my_plugin,
     .version = "0.0.1",
     .minimum_zig_version = "0.16.0",
