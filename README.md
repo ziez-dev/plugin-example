@@ -46,9 +46,6 @@ pub fn main() !void {
     defer _ = gpa.deinit();
     const allocator = gpa.allocator();
 
-    var threaded = std.Io.Threaded.init_single_threaded;
-    const io = threaded.io();
-
     var app = ziez.init(allocator);
     defer app.deinit();
 
@@ -64,7 +61,7 @@ pub fn main() !void {
         }
     }.h);
 
-    try app.listen(io, "0.0.0.0:3000");
+    try app.listen("0.0.0.0:3000");
 }
 ```
 
